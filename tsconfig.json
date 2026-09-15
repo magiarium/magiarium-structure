@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "esnext",
+    "declaration": true,
+    "declarationMap": false,
+    "rootDir": "./src",
+    "outDir": "dist",
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true, // default import 用
+    "resolveJsonModule": true // JSON importを許可
+  },
+  "include": ["src", "test"],
+  "exclude": ["test"]
+}
