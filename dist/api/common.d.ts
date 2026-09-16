@@ -26,3 +26,5 @@ export type LastEvaluatedKey = {
     gsiPk: string;
     gsiSk: string;
 };
+export declare const ORDER_BY_TYPE: readonly ["published_at_desc", "published_at_asc", "view_count_desc", "view_count_asc"];
+export type OrderByType = (typeof ORDER_BY_TYPE)[number];

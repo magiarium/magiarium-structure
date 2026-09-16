@@ -31,3 +31,11 @@ export type LastEvaluatedKey = {
   gsiPk: string;
   gsiSk: string;
 };
+
+export const ORDER_BY_TYPE = [
+  'published_at_desc',
+  'published_at_asc',
+  'view_count_desc',
+  'view_count_asc',
+] as const;
+export type OrderByType = (typeof ORDER_BY_TYPE)[number];
