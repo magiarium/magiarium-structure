@@ -1,5 +1,5 @@
 import { ItemId, ItemMetadata, ItemType } from '../../item/common';
-import { ApiResponseBase } from '../common';
+import { ApiResultBase } from '../common';
 
 export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
   /** パスパラメータ */
@@ -14,5 +14,5 @@ export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
   };
 };
 
-export type GetItemMetadataListResponse<T extends ItemType = ItemType> =
-  ApiResponseBase<ItemMetadata<T>[]>;
+export type GetItemMetadataListResult<T extends ItemType = ItemType> =
+  ApiResultBase<ItemMetadata<T>[]>;

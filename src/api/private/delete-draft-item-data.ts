@@ -1,5 +1,5 @@
 import { ItemId, ItemType } from '../../item/common';
-import { ApiResponseBase } from '../common';
+import { ApiResultBase } from '../common';
 
 export type DeleteDraftItemDataRequest = {
   /** パスパラメータ */
@@ -12,4 +12,4 @@ export type DeleteDraftItemDataRequest = {
 };
 
 /** 下書きアイテム削除レスポンス */
-export type DeleteDraftItemDataResponse = ApiResponseBase<undefined>;
+export type DeleteDraftItemDataResult = ApiResultBase<undefined>;

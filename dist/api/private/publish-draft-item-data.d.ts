@@ -1,5 +1,5 @@
 import { ItemId, ItemType } from '../../item/common';
-import { ApiResponseBase } from '../common';
+import { ApiResultBase } from '../common';
 export type PublishDraftItemDataRequest = {
     /** パスパラメータ */
     params: {
@@ -9,5 +9,5 @@ export type PublishDraftItemDataRequest = {
         itemType: ItemType;
     };
 };
-/** 下書きアイテム公開レスポンス */
-export type PublishDraftItemDataResponse = ApiResponseBase<undefined>;
+/** 下書きアイテム公開結果 */
+export type PublishDraftItemDataResult = ApiResultBase<undefined>;

@@ -1,5 +1,5 @@
 import { ItemData, ItemId, ItemState, ItemType } from '../../item';
-import { ApiResponseBase } from '../common';
+import { ApiResultBase } from '../common';
 /** 編集アイテム取得処理リクエスト */
 export type GetEditItemDataRequest<T extends ItemType = ItemType> = {
     /** パスパラメータ */
@@ -12,5 +12,5 @@ export type GetEditItemDataRequest<T extends ItemType = ItemType> = {
         itemState: ItemState;
     };
 };
-/** 編集アイテム取得処理レスポンス */
-export type GetEditItemDataResponse<T extends ItemType = ItemType> = ApiResponseBase<ItemData<T>>;
+/** 編集アイテム取得処理結果 */
+export type GetEditItemDataResult<T extends ItemType = ItemType> = ApiResultBase<ItemData<T>>;
