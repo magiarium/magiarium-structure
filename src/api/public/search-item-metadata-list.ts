@@ -19,6 +19,5 @@ export type SearchItemMetadataListRequest<T extends ItemType = ItemType> = {
   };
 };
 
-/** アイテム検索レスポンス */
-export type SearchItemMetadataResponse<T extends ItemType = ItemType> =
+export type SearchItemMetadataResult<T extends ItemType = ItemType> =
   ApiResultBase<ItemMetadata<T>[]>;
