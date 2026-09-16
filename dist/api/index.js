@@ -8,3 +8,4 @@ export * from './private/save-draft-item-data';
 // 公開API
 export * from './public/get-item-data';
 export * from './public/get-item-metadata-list';
+export * from './public/search-item-metadata-list';
