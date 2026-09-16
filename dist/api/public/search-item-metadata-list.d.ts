@@ -17,4 +17,4 @@ export type SearchItemMetadataListRequest<T extends ItemType = ItemType> = {
         lastEvaluatedKey?: LastEvaluatedKey;
     };
 };
-export type SearchItemMetadataResult<T extends ItemType = ItemType> = ApiResultBase<ItemMetadata<T>[]>;
+export type SearchItemMetadataListResult<T extends ItemType = ItemType> = ApiResultBase<ItemMetadata<T>[]>;
