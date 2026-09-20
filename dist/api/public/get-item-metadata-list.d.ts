@@ -1,5 +1,5 @@
 import { ItemId, ItemMetadata, ItemType } from '../../item/common';
-import { ApiResultBase } from '../common';
+import { ApiResultBase, LastEvaluatedKey, OrderByType } from '../common';
 export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
     /** パスパラメータ */
     params: {
@@ -10,6 +10,13 @@ export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
     query: {
         /** 取得するItemIDのリスト */
         itemIds: ItemId[];
+    } | {
+        /** 並び順 */
+        orderBy?: OrderByType;
+        /** 取得上限数 */
+        limit?: number;
+        /** 前回検索時最後の主キー */
+        lastEvaluatedKey?: LastEvaluatedKey;
     };
 };
 export type GetItemMetadataListResult<T extends ItemType = ItemType> = ApiResultBase<ItemMetadata<T>[]>;

@@ -25,6 +25,7 @@ export type ErrorDetail = {
   issue: string;
 };
 
+/** LastEvaluatedKey */
 export type LastEvaluatedKey = {
   pk: string;
   sk: string;
@@ -32,6 +33,7 @@ export type LastEvaluatedKey = {
   gsiSk: string;
 };
 
+/** 並び順種別 */
 export const ORDER_BY_TYPE = [
   'published_at_desc',
   'published_at_asc',

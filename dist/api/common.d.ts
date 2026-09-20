@@ -20,11 +20,13 @@ export type ErrorDetail = {
     /** エラー内容 */
     issue: string;
 };
+/** LastEvaluatedKey */
 export type LastEvaluatedKey = {
     pk: string;
     sk: string;
     gsiPk: string;
     gsiSk: string;
 };
+/** 並び順種別 */
 export declare const ORDER_BY_TYPE: readonly ["published_at_desc", "published_at_asc", "view_count_desc", "view_count_asc"];
 export type OrderByType = (typeof ORDER_BY_TYPE)[number];
