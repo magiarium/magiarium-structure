@@ -12,7 +12,11 @@ export type ApiResultBase<T> =
     };
 
 /** エラー種別 */
-export const ERROR_TYPE = ['SYSTEM_ERROR', 'BUSINESS_ERROR'] as const;
+export const ERROR_TYPE = [
+  'SYSTEM_ERROR',
+  'BUSINESS_ERROR',
+  'VALIDATION_ERROR',
+] as const;
 export type ErrorType = (typeof ERROR_TYPE)[number];
 
 /** エラー詳細 */

@@ -2,6 +2,7 @@ import { DateTimeString } from '../common';
 import { BlogItemContent, BlogItemData, BlogItemMetadata } from './blog';
 
 /** アイテムID */
+export const ITEM_ID_PATTERN = /^\d{14}$/;
 export type ItemId = DateTimeString;
 
 /** アイテム種別 */

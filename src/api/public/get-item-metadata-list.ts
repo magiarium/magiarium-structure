@@ -1,4 +1,4 @@
-import { ItemId, ItemMetadata, ItemType } from '../../item/common';
+import { ItemMetadata, ItemType } from '../../item/common';
 import { ApiResultBase, LastEvaluatedKey, OrderByType } from '../common';
 
 export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
@@ -10,8 +10,8 @@ export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
   /** クエリパラメータ */
   query:
     | {
-        /** 取得するItemIDのリスト */
-        itemIds: ItemId[];
+        /** 取得するItemIDのリスト(カンマ区切りで複数指定可) */
+        itemIds: string;
       }
     | {
         /** 並び順 */
