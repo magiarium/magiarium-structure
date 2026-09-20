@@ -1,6 +1,7 @@
 import { DateTimeString } from '../common';
 import { BlogItemContent, BlogItemData, BlogItemMetadata } from './blog';
 /** アイテムID */
+export declare const ITEM_ID_PATTERN: RegExp;
 export type ItemId = DateTimeString;
 /** アイテム種別 */
 export declare const ITEM_TYPE: readonly ["blog"];

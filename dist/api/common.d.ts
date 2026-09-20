@@ -9,7 +9,7 @@ export type ApiResultBase<T> = {
     };
 };
 /** エラー種別 */
-export declare const ERROR_TYPE: readonly ["SYSTEM_ERROR", "BUSINESS_ERROR"];
+export declare const ERROR_TYPE: readonly ["SYSTEM_ERROR", "BUSINESS_ERROR", "VALIDATION_ERROR"];
 export type ErrorType = (typeof ERROR_TYPE)[number];
 /** エラー詳細 */
 export type ErrorDetail = {
