@@ -3,6 +3,7 @@ export const ERROR_TYPE = [
     'SYSTEM_ERROR',
     'BUSINESS_ERROR',
     'VALIDATION_ERROR',
+    'AUTHORIZATION_ERROR',
 ];
 /** 並び順種別 */
 export const ORDER_BY_TYPE = [

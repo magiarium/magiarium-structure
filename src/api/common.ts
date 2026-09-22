@@ -16,6 +16,7 @@ export const ERROR_TYPE = [
   'SYSTEM_ERROR',
   'BUSINESS_ERROR',
   'VALIDATION_ERROR',
+  'AUTHORIZATION_ERROR',
 ] as const;
 export type ErrorType = (typeof ERROR_TYPE)[number];
 
