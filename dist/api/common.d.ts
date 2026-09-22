@@ -35,7 +35,7 @@ export type OrderByType = (typeof ORDER_BY_TYPE)[number];
  *
  * @template T エラー発生時に返却するレスポンスボディの型
  */
-export declare class CustomError<T = never> extends Error {
+export declare class CustomError<T = undefined> extends Error {
     /** HTTPステータスコード */
     statusCode: number;
     /** エラー発生時に返却するレスポンスボディ */
@@ -51,3 +51,12 @@ export declare class CustomError<T = never> extends Error {
         body: NoInfer<T>;
     });
 }
+/**
+ * APIレスポンスの基本型定義
+ */
+export type ApiResponseBase<T = undefined> = {
+    /** ステータスコード */
+    statusCode: number;
+    /** レスポンスボディ */
+    body: T;
+};

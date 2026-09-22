@@ -52,7 +52,7 @@ export type OrderByType = (typeof ORDER_BY_TYPE)[number];
  *
  * @template T エラー発生時に返却するレスポンスボディの型
  */
-export class CustomError<T = never> extends Error {
+export class CustomError<T = undefined> extends Error {
   /** HTTPステータスコード */
   statusCode: number;
   /** エラー発生時に返却するレスポンスボディ */
@@ -70,3 +70,13 @@ export class CustomError<T = never> extends Error {
     this.body = body;
   }
 }
+
+/**
+ * APIレスポンスの基本型定義
+ */
+export type ApiResponseBase<T = undefined> = {
+  /** ステータスコード */
+  statusCode: number;
+  /** レスポンスボディ */
+  body: T;
+};
