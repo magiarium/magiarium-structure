@@ -46,3 +46,27 @@ export const ORDER_BY_TYPE = [
   'view_count_asc',
 ] as const;
 export type OrderByType = (typeof ORDER_BY_TYPE)[number];
+
+/**
+ * API例外処理用のカスタムエラークラス
+ *
+ * @template T エラー発生時に返却するレスポンスボディの型
+ */
+export class CustomError<T = never> extends Error {
+  /** HTTPステータスコード */
+  statusCode: number;
+  /** エラー発生時に返却するレスポンスボディ */
+  body: T;
+
+  /**
+   * CustomError生成コンストラクタ
+   *
+   * @param params エラー情報
+   * @param params.statusCode HTTPステータスコード
+   * @param params.body エラー発生時に返却するレスポンスボディ */
+  constructor({ statusCode, body }: { statusCode: number; body: NoInfer<T> }) {
+    super('CustomError');
+    this.statusCode = statusCode;
+    this.body = body;
+  }
+}
