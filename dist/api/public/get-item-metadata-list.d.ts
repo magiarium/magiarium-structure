@@ -1,6 +1,6 @@
 import { ItemMetadata, ItemType } from '../../item/common';
 import { ApiResultBase, LastEvaluatedKey, OrderByType } from '../common';
-export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
+export type GetPublicItemMetadataListRequest<T extends ItemType = ItemType> = {
     /** パスパラメータ */
     params: {
         /** アイテム種別 */
@@ -19,4 +19,4 @@ export type GetItemMetadataListRequest<T extends ItemType = ItemType> = {
         lastEvaluatedKey?: LastEvaluatedKey;
     };
 };
-export type GetItemMetadataListResult<T extends ItemType = ItemType> = ApiResultBase<ItemMetadata<T>[]>;
+export type GetPublicItemMetadataListResult<T extends ItemType = ItemType> = ApiResultBase<ItemMetadata<T>[]>;

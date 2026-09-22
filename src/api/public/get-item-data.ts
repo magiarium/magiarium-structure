@@ -1,7 +1,7 @@
 import { ItemData, ItemId, ItemType } from '../../item/common';
 import { ApiResultBase } from '../common';
 
-export type GetItemDataRequest<T extends ItemType = ItemType> = {
+export type GetPublicItemDataRequest<T extends ItemType = ItemType> = {
   /** パスパラメータ */
   params: {
     itemId: ItemId;
@@ -10,6 +10,5 @@ export type GetItemDataRequest<T extends ItemType = ItemType> = {
   };
 };
 
-export type GetItemDataResult<T extends ItemType = ItemType> = ApiResultBase<
-  ItemData<T>
->;
+export type GetPublicItemDataResult<T extends ItemType = ItemType> =
+  ApiResultBase<ItemData<T>>;
