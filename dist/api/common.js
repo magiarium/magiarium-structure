@@ -4,6 +4,7 @@ export const ERROR_TYPE = [
     'BUSINESS_ERROR',
     'VALIDATION_ERROR',
     'AUTHORIZATION_ERROR',
+    'NOT_FOUND',
 ];
 /** 並び順種別 */
 export const ORDER_BY_TYPE = [

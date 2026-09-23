@@ -9,7 +9,7 @@ export type ApiResultBase<T> = {
     };
 };
 /** エラー種別 */
-export declare const ERROR_TYPE: readonly ["SYSTEM_ERROR", "BUSINESS_ERROR", "VALIDATION_ERROR", "AUTHORIZATION_ERROR"];
+export declare const ERROR_TYPE: readonly ["SYSTEM_ERROR", "BUSINESS_ERROR", "VALIDATION_ERROR", "AUTHORIZATION_ERROR", "NOT_FOUND"];
 export type ErrorType = (typeof ERROR_TYPE)[number];
 /** エラー詳細 */
 export type ErrorDetail = {
@@ -51,12 +51,3 @@ export declare class CustomError<T = undefined> extends Error {
         body: NoInfer<T>;
     });
 }
-/**
- * APIレスポンスの基本型定義
- */
-export type ApiResponseBase<T = undefined> = {
-    /** ステータスコード */
-    statusCode: number;
-    /** レスポンスボディ */
-    body: T;
-};

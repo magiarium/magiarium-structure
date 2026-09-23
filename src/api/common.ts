@@ -17,6 +17,7 @@ export const ERROR_TYPE = [
   'BUSINESS_ERROR',
   'VALIDATION_ERROR',
   'AUTHORIZATION_ERROR',
+  'NOT_FOUND',
 ] as const;
 export type ErrorType = (typeof ERROR_TYPE)[number];
 
@@ -70,13 +71,3 @@ export class CustomError<T = undefined> extends Error {
     this.body = body;
   }
 }
-
-/**
- * APIレスポンスの基本型定義
- */
-export type ApiResponseBase<T = undefined> = {
-  /** ステータスコード */
-  statusCode: number;
-  /** レスポンスボディ */
-  body: T;
-};
