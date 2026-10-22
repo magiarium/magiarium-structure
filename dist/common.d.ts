@@ -9,9 +9,9 @@ export type ImageMetadata = {
     /** 代替テキスト */
     alt: string;
     /** 画像のファイル名 */
-    title: string;
-    /** 画像属性 */
-    attributes: {
+    fileName: string;
+    /** 画像サイズ */
+    size: {
         /** 高さ */
         height: number;
         /** 幅 */
